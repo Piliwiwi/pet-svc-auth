@@ -62,10 +62,6 @@ La aplicación móvil de ejemplo que utiliza este servicio se encuentra en el si
     ./gradlew bootRun
     ```
 
-## Contribución
-
-Si deseas contribuir a este proyecto, por favor abre un `issue` o envía un `pull request` con tus cambios.
-
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
