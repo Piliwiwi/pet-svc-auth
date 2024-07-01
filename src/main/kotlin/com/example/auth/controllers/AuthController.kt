@@ -86,9 +86,9 @@ class AuthController(
         @RequestHeader("Authorization") authorization: String?,
         request: HttpServletRequest
     ): ResponseEntity<Any> {
-        val token = authorization?.removePrefix("Gato ")?.trim()
+        val token = authorization?.removePrefix("SecretWord ")?.trim()
 
-        if (token == null || !authorization.startsWith("Gato ")) {
+        if (token == null || !authorization.startsWith("SecretWord ")) {
             return ResponseEntity.status(401).body(Message("unauthenticated"))
         }
 
@@ -103,9 +103,9 @@ class AuthController(
 
     @PostMapping("/validate-token")
     fun validateToken(@RequestHeader("Authorization") authorization: String?): ResponseEntity<String> {
-        val token = authorization?.removePrefix("Gato ")?.trim()
+        val token = authorization?.removePrefix("SecretWord ")?.trim()
 
-        if (token == null || !authorization.startsWith("Gato ")) {
+        if (token == null || !authorization.startsWith("SecretWord ")) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build()
         }
 
